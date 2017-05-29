@@ -1,5 +1,6 @@
 # las2pcd
 (c) by Arnadi Murtiyoso
+
 Photogrammetry and Geomatics Group, ICube UMR 7357 INSA Strasbourg
 
 Simple function written in C++ used to convert .LAS point cloud to PCL-compatible .PCD format.
