@@ -14,6 +14,6 @@ Change log:
 v0.1 (24 May 2017):
 - created simple function to convert .las files to .pcd files
 
-v0.2 (29 May 2017:
+v0.2 (29 May 2017):
 - added code to import .las point cloud color
 - resolved problem with color scale difference between .las and PCL
