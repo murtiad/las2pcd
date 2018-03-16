@@ -17,3 +17,8 @@ v0.1 (24 May 2017):
 v0.2 (29 May 2017):
 - added code to import .las point cloud color
 - resolved problem with color scale difference between .las and PCL
+
+v0.3 (16 March 2017), Jonathan Greenberg's fork (jgreenberg@unr.edu)
+- cmake tweaked to work on standard Ubuntu systems (designed for a singularity install)
+- requires:
+apt-get install -y libpcl-dev liblas-dev liblas-c-dev
