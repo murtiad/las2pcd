@@ -10,12 +10,19 @@ Required dependencies:
 - libLAS (https://www.liblas.org/)
 
 Ubuntu installation:
+	
 	apt-get install -y git cmake
+	
 	apt-get install -y libpcl-dev liblas-dev liblas-c-dev
+	
 	git clone -b ubuntu-singularity https://github.com/gearslaboratory/las2pcd.git
+	
 	cd las2pcd
+	
 	cmake .
+	
 	make
+	
 	mv las2pcd /usr/bin/
 
 Change log:
