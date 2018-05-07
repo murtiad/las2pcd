@@ -7,22 +7,26 @@
 
 using namespace std;
 
-int main (int argc, char** argv)
+int main (int argc, char *argv[])
 {
 	string filePath;
 	cout << "===================================================================" << endl;
 	cout << "LAS2PCD - Converts .las point clouds into PCL-friendly format .pcd" << endl;
-	cout << "ver 0.2 - 29 May 2017" << endl;
+	cout << "ver 0.3 - 16 March 2018" << endl;
 	cout << "(c) Arnadi Murtiyoso" << endl;
 	cout << "PAGE Group, ICube Laboratory UMR 7357 INSA Strasbourg" << endl;
 	cout << "contact: arnadi.murtiyoso@insa-strasbourg.fr" << endl;
 	cout << "https://github.com/murtiad" << endl;
+	cout << "Ubuntu tweaks by Jonathan Greenberg, jgreenberg@unr.edu" << endl;
+	cout << "Ubuntu version: https://github.com/gearslaboratory/las2pcd" << endl;
 	cout << "===================================================================" << endl;
 	cout << endl;
 
-	cout << "Enter full .las file path: (or you can also drag the file here)" << endl;
+	// cout << "Enter full .las file path: (or you can also drag the file here)" << endl;
     
-	getline(cin, filePath);
+	// getline(cin, filePath);
+	// Edited to make fully command-line:
+	filePath=argv[1];
 
     std::cerr << "INFO : Loading : " << filePath << std::endl;
     
@@ -81,7 +85,8 @@ int main (int argc, char** argv)
 		i++; // ...moving on
 	}
   
-	pcl::io::savePCDFileASCII ("pointcloud.pcd", cloud);
+	// Allows output file to be set:
+	pcl::io::savePCDFileASCII (argv[2], cloud);
   
 	std::cerr << "Saved " << cloud.points.size () << " data points to pointcloud.pcd." << std::endl;
 
