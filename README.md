@@ -39,4 +39,5 @@ v0.3 (16 March 2018), Jonathan Greenberg's fork (jgreenberg@unr.edu)
 - requires:
 apt-get install -y libpcl-dev liblas-dev liblas-c-dev
 
-
+v0.4 (15 June 2020):
+- added code to retrieve intensity value from the .las file (credit to Antoine Carreaud)
