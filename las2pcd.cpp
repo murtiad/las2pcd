@@ -76,9 +76,9 @@ int main (int argc, char *argv[])
 		b1 = (reader.GetPoint().GetColor().GetBlue()); 
 
 		// .las stores RGB color in 16-bit (0-65535) while .pcd demands an 8-bit value (0-255). Let's convert them!
-		r2 = ceil(((float)r1/65536)*(float)256);
-		g2 = ceil(((float)g1/65536)*(float)256);
-		b2 = ceil(((float)b1/65536)*(float)256);
+		r2 = ceil(((float)r1/65535)*(float)255);
+		g2 = ceil(((float)g1/65535)*(float)255);
+		b2 = ceil(((float)b1/65535)*(float)255);
 
 		// PCL particularity: must "pack" the RGB into one single integer and then reinterpret them as float
 		rgb = ((int)r2) << 16 | ((int)g2) << 8 | ((int)b2);
