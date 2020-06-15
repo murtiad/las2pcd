@@ -64,8 +64,11 @@ int main (int argc, char *argv[])
 	{
 		// get XYZ information
 		cloud.points[i].x = (reader.GetPoint().GetX());
-	    cloud.points[i].y = (reader.GetPoint().GetY());
-	    cloud.points[i].z = (reader.GetPoint().GetZ());
+	    	cloud.points[i].y = (reader.GetPoint().GetY());
+	    	cloud.points[i].z = (reader.GetPoint().GetZ());
+		
+		// get intensity information
+		cloud.points[i].intensity = (reader.GetPoint().GetIntensity());
 				
 		// get RGB information. Note: in liblas, the "Color" class can be accessed from within the "Point" class, thus the triple gets
 		r1 = (reader.GetPoint().GetColor().GetRed());
